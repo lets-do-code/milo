@@ -1,0 +1,16 @@
+
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+}
+
+
+.chatScrollbar::-webkit-scrollbar{
+  display: none;
+}
