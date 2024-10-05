@@ -1,10 +1,38 @@
 <template>
-    <div class="rounded-md border h-full w-full">
-        <video ref="localVideo" autoplay playsinline class="local-video" muted
-            @loadedmetadata="onLocalVideoLoaded"></video>
-
+    <div class="rounded-md h-full gap-3 w-full flex flex-wrap flex-grow">
+        <div class=" h-[205px] w-[270px] rounded-md overflow-hidden border-4 border-gray-600 ">
+            <video ref="localVideo" autoplay playsinline class="local-video h-full w-full" muted
+                @loadedmetadata="onLocalVideoLoaded">
+            </video>
+        </div>
+        <div class=" h-[205px] w-[270px] rounded-md overflow-hidden border-4 border-gray-600 ">
+            <video ref="localVideo" autoplay playsinline class="local-video h-full w-full" muted
+                @loadedmetadata="onLocalVideoLoaded">
+            </video>
+        </div>
+        <div class=" h-[205px] w-[270px] rounded-md overflow-hidden border-4 border-gray-600 ">
+            <video ref="localVideo" autoplay playsinline class="local-video h-full w-full" muted
+                @loadedmetadata="onLocalVideoLoaded">
+            </video>
+        </div>
+        <div class=" h-[205px] w-[270px] rounded-md overflow-hidden border-4 border-gray-600 ">
+            <video ref="localVideo" autoplay playsinline class="local-video h-full w-full" muted
+                @loadedmetadata="onLocalVideoLoaded">
+            </video>
+        </div>
+        <div class=" h-[205px] w-[270px] rounded-md overflow-hidden border-4 border-gray-600 ">
+            <video ref="localVideo" autoplay playsinline class="local-video h-full w-full" muted
+                @loadedmetadata="onLocalVideoLoaded">
+            </video>
+        </div>
+        <div class=" h-[205px] w-[270px] rounded-md overflow-hidden border-4 border-gray-600 ">
+            <video ref="localVideo" autoplay playsinline class="local-video h-full w-full" muted
+                @loadedmetadata="onLocalVideoLoaded">
+            </video>
+        </div>
         <div v-for="(remoteStream, index) in remoteStreams" :key="index">
-            <video :ref="'remoteVideo' + index" autoplay playsinline :srcObject="remoteStream"></video>
+            <video :ref="'remoteVideo' + index" autoplay playsinline :srcObject="remoteStream"
+                class="local-video border h-full w-full"></video>
         </div>
     </div>
 </template>
